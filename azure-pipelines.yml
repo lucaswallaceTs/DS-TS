@@ -1,0 +1,48 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSource: "spec"
+      versionSpec: "18.x"
+      checkLatest: true
+
+  - script: |
+        npm install
+    displayName: "Instalar dependências"
+
+  - script: |
+        npm run build
+        
+    displayName: "Rodar projeto"
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "$(System.DefaultWorkingDirectory)/"
+      includeRootFolder: false
+      archiveType: "zip"
+      archiveFile: "$(Build.ArtifactStagingDirectory)/drop.zip"
+      replaceExistingArchive: true
+    displayName: "Arquivar resultado da build"
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: "$(Build.ArtifactStagingDirectory)/drop.zip"
+      artifact: "drop"
+    displayName: "Publicar artefato do pipeline"
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: "Azure MCA - TICKET AGORA (e20839c9-ec15-4bb9-860b-025f314735e2)-9232"
+      appType: "webApp"
+      appName: "new-panel"
+      deployToSlotOrASE: true
+      resourceGroupName: "TCKT-RGPRD-APPTA"
+      slotName: "ds"
+      package: "$(Build.ArtifactStagingDirectory)/drop.zip"
+      customWebConfig: "-Handler iisnode -NodeStartFile server.js -appType node"
+      deploymentMethod: "auto"

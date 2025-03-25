@@ -1,0 +1,256 @@
+footer{
+    padding: 60px 72px 32px 72px;
+    background-color: #06060619;
+    width: 100%;
+    max-width: 1440px;
+    
+    h5{
+      font-size: 16px;
+      font-weight: 600;
+    }
+    h6{
+      font-size: 14px;
+      font-weight: 400;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding: 32px 16px;
+      width: 100%;
+    }
+    .wrapper-footer{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+      a{
+        text-decoration: none;
+        color: #060606;
+      }
+      .wrapper-1{
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        height: 188px;
+        margin-right: 24px;
+        @media (max-width: 768px) {
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+          text-align: center;
+          margin: 0px;
+        }
+        &__logo{
+          width: 182px;
+          height: 32px;
+          background: url("../../assets/footer/logo-ticketsports.svg");
+          @media (max-width: 768px) {
+            width: 50px;
+            height: 40px;
+            background: url("../../assets/footer/icon-logo.svg") no-repeat;
+            background-position: center;
+            background-size: contain;
+          }
+        }
+        p{
+          font-weight: 400;
+          width: 100%;
+          margin: 16px 0px;
+        }
+        &__icones{
+          display: flex;
+          width: 120px;
+          height: 32px;
+          justify-content: space-between;
+          &--facebook{
+            width: 24px;
+            height: 24px;
+            background: url("../../assets/footer/Facebook_black.svg") no-repeat;
+            background-size: cover;
+          }
+          &--youtube{
+            width: 24px;
+            height: 24px;
+            background: url("../../assets/footer/Youtube_black.svg") no-repeat;
+            background-size: contain;
+          }
+          &--instagram{
+            width: 24px;
+            height: 24px;
+            background: url("../../assets/footer/Instagram_black.svg") no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      .wrapper-2{
+        width: 240px;
+        height: 188px;
+        margin-right: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        a:first-child:hover{
+          text-decoration: none;
+        }
+        h5{
+          margin: 0px 0px 12px 0px;
+        }
+        h6{
+          font-weight: 400;
+          width: fit-content;
+          margin: 4px 0px;
+        }
+        a:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .wrapper-3{
+        width: 240px;
+        height: 188px;      
+        margin-right: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        a:first-child:hover{
+          text-decoration: none;
+        }
+        h5{
+          margin: 0px 0px 12px 0px;
+        }
+        h6{
+          font-weight: 400;
+          width: fit-content;
+          margin: 4px 0px;
+        }
+        a:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .wrapper-4{
+        width: 240px;
+        height: 188px;      
+        margin-right: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        a:first-child:hover{
+          text-decoration: none;
+        }
+        h5{
+          margin: 0px 0px 12px 0px;
+        }
+        h6{
+          font-weight: 400;
+          width: fit-content;
+          margin: 4px 0px;
+        }
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+      .wrapper-5{
+        width: 240px;
+        height: 188px;      
+        margin-right: 24px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        a:first-child:hover{
+          text-decoration: none;
+        }
+        h5{
+          margin: 0px 0px 12px 0px;
+        }
+        h6{
+          font-weight: 400;
+          width: fit-content;
+          margin: 4px 0px;
+        }
+        a:last-child{
+          opacity: 0;
+        }
+        a:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    hr{
+      background-color: #06060619;
+      opacity: 0.36;
+      margin: 42px 0px 32px 0px;
+      @media (max-width: 768px) {
+        margin: 32px 0px 0px 0px;
+      }
+    }
+    .wrapper-copy{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        text-align: center;
+        margin: auto
+      }
+      &__app{
+        display: flex;
+        width: 75%;
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width: 768px) {
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        h6{
+          width: fit-content;
+          margin-right: 16px;
+          @media (max-width: 768px) {
+            margin-top: 16px;
+          }
+        }
+        &--store{
+          width: 134px;
+          height: 40px;
+          background: url("../../assets/footer/icon-app-android.svg") no-repeat;
+          background-size: cover;
+          margin-right: 16px;
+          @media (max-width: 768px) {
+            margin: 16px 0px 16px 0px;
+          }
+        }
+        &--apple{
+          width: 134px;
+          height: 40px;
+          background: url("../../assets/footer/icon-app-apple.svg") no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  

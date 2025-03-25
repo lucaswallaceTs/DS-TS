@@ -1,0 +1,45 @@
+.blocks-wrapper {
+  width: calc(100% - 64px);
+  max-width: 800px;
+  background-color: #fff;
+  min-width: 300px;
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  &__title{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;    
+  margin-bottom: 32px;
+    &__info{
+      text-align: left;
+      p{
+        margin: 8px 0px 0px 0px;
+      }
+    }
+    &__close{
+      background-image: url("../../assets/dialog/close.svg");
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  &__content{
+    width: calc(100% - 64px);
+  }
+  &__btn-save{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+    button{
+      width: fit-content;
+    }
+  }
+}
